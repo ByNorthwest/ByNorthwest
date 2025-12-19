@@ -1,0 +1,77 @@
+/* TableOfContents.module.css */
+.toc {
+    position: sticky;
+    top: 100px;
+    /* Offset for navbar */
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    padding-left: var(--spacing-lg);
+    border-left: 2px solid var(--color-border);
+}
+
+.tocTitle {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-tertiary);
+    margin-bottom: var(--spacing-md);
+    font-weight: 600;
+}
+
+.tocList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tocItem {
+    margin-bottom: var(--spacing-xs);
+}
+
+.tocSubItem {
+    padding-left: var(--spacing-md);
+}
+
+.tocLink {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    padding: 2px 0;
+    border-left: 2px solid transparent;
+    margin-left: -2px;
+    /* Pull border to align with container border */
+    padding-left: var(--spacing-sm);
+}
+
+.tocLink:hover {
+    color: var(--color-primary);
+}
+
+.tocLink.active {
+    color: var(--color-primary);
+    font-weight: 500;
+    border-left-color: var(--color-primary);
+}
+
+/* Scrollbar styling for TOC */
+.toc::-webkit-scrollbar {
+    width: 4px;
+}
+
+.toc::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.toc::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 4px;
+}
+
+@media (max-width: 1024px) {
+    .toc {
+        display: none;
+        /* Hide TOC on mobile/tablet for now, or move to a dropdown */
+    }
+}
