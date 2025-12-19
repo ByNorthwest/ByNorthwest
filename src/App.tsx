@@ -10,7 +10,7 @@ import './styles/globals.css';
 function App() {
   return (
     <BlogProvider>
-      <BrowserRouter basename="/ByNorthwest">
+      <BrowserRouter>
         <Layout>
           <Routes>
             <Route path="/" element={<Blogs />} />
@@ -20,6 +20,7 @@ function App() {
           </Routes>
         </Layout>
       </BrowserRouter>
+
     </BlogProvider>
   );
 }
